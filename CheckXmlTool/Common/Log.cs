@@ -9,14 +9,13 @@ namespace CheckXmlTool.Common
 {
     public class Log
     {
-        public void Write(string fileName, string msg)
+        public void Write(string fileName, string msg, bool isAppend = true)
         {
             string logPath = Properties.Settings.Default.LogPath;
-            string logFileName = string.Format("checkorderxml_{0}.log", fileName);
+            string logFileName = string.Format("checkorderxml_{0}.csv", fileName);
             string logFilePath = Path.Combine(logPath, logFileName);
             //UTF8で書き込む
-            //書き込むファイルが既に存在している場合は、上書きする
-            using (StreamWriter sw = new StreamWriter(logFilePath, true, Encoding.UTF8))
+            using (StreamWriter sw = new StreamWriter(logFilePath, isAppend, Encoding.UTF8))
             {
                 sw.WriteLine(msg);
                 //閉じる

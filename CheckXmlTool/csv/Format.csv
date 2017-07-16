@@ -1,0 +1,12 @@
+Tag0,Tag1,Tag2,Tag3,Tag4,Attributes,Required,Conditions
+CenterOrder,,,,,,◎,
+,Order,,,,AppId,◎,AttributesのAppIdは0001 or 0002とする
+,,OrderId,,,,◎,OrderIdは6桁とする
+,,PayType,,,,◎,「2、4、5、7」のみとする
+,,ShipType,,,,◎,「2、3、6」のみとする
+,,Option,,,,,
+,,Option1,,,,×,
+,,Articles,,,ArticleNum,◎,ArticleNumがArticles内のArticleTagの数と等しいこと。ArticleNumは1以上とする。 
+,,,*Article,,,◎,
+,,,,ProductId,,〇,Articleタグが存在する場合は、当該のタグが存在しなければならない。MST_PriceのASP_IDとOrderタグのAttributes:AppIdに一致するデータのProductIdであること
+,,,,Price,,〇,Articleタグが存在する場合は、当該のタグが存在しなければならない。

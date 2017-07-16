@@ -46,5 +46,17 @@ namespace CheckXmlTool.Properties {
                 this["LogPath"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Gitrepo\\LearnApps\\CheckXmlTool\\CheckXmlTool\\csv\\Format.csv")]
+        public string FormatCsvPath {
+            get {
+                return ((string)(this["FormatCsvPath"]));
+            }
+            set {
+                this["FormatCsvPath"] = value;
+            }
+        }
     }
 }

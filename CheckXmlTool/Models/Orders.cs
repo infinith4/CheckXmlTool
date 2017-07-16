@@ -8,8 +8,8 @@ using System.Xml.Serialization;
 namespace CheckXmlTool.Models
 {
 
-    [XmlRoot("Orders")]
-    public class Orders
+    [XmlRoot("CenterOrder")]
+    public class CenterOrder
     {
         [XmlElement("Order")]
         public Order Order { get; set; }
@@ -17,8 +17,8 @@ namespace CheckXmlTool.Models
     
     public class Order
     {
-        [XmlAttribute("aspid")]
-        public string aspid { get; set; }
+        [XmlAttribute("AppId")]
+        public string AppId { get; set; }
 
         [XmlElement("OrderId")]
         public string OrderId { get; set; }
@@ -26,6 +26,8 @@ namespace CheckXmlTool.Models
         public int? PayType { get; set; }
         [XmlElement("ShipType")]
         public int? ShipType { get; set; }
+        [XmlElement("Option")]
+        public string Option { get; set; }
         [XmlElement("Articles")]
         public Articles Articles { get; set; }
     }
@@ -33,7 +35,7 @@ namespace CheckXmlTool.Models
     public class Articles
     {
         [XmlElement("Article")]
-        public List<Article> articleList { get; set; }
+        public List<Article> ArticleList { get; set; }
     }
     public class Article
     {
