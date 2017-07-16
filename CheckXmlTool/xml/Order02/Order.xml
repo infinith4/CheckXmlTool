@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Orders>
+  <Order aspid="0001">
+    <OrderId>000001</OrderId>
+    <PayType>2</PayType>
+    <Articles>
+      <Article>
+        <Price>100</Price>
+      </Article>
+      <Article>
+        <ProductId>0</ProductId>
+        <Price>200</Price>
+      </Article>
+    </Articles>
+  </Order>
+</Orders>
